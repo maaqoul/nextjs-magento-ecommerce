@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "ts-node -P scripts/tsconfig.json scripts/seed.ts",
+    "seed:layouts": "ts-node -P scripts/tsconfig.json scripts/seed-layouts.ts",
     "check-schema": "ts-node -P scripts/tsconfig.json scripts/check-schema.ts"
   },
   "dependencies": {

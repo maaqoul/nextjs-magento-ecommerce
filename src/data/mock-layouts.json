@@ -1,0 +1,66 @@
+{
+  "layouts": [
+    {
+      "identifier": "home",
+      "title": "Home Page Layout",
+      "layout_data": {
+        "type": "section",
+        "props": {
+          "className": "container mx-auto px-4 py-8 space-y-8"
+        },
+        "children": [
+          {
+            "type": "hero",
+            "props": {
+              "title": "Welcome to Our Store",
+              "subtitle": "Discover our curated collection of premium products",
+              "image": "https://picsum.photos/1920/1080",
+              "className": "rounded-lg overflow-hidden"
+            }
+          },
+          {
+            "type": "product-grid",
+            "props": {
+              "title": "Featured Products",
+              "subtitle": "Hand-picked selections just for you",
+              "products": [
+                {
+                  "id": 1,
+                  "sku": "product-1",
+                  "name": "Premium T-Shirt",
+                  "price": 29.99,
+                  "currency": "USD",
+                  "image": "https://picsum.photos/400/500?random=1"
+                },
+                {
+                  "id": 2,
+                  "sku": "product-2",
+                  "name": "Designer Jeans",
+                  "price": 89.99,
+                  "currency": "USD",
+                  "image": "https://picsum.photos/400/500?random=2"
+                },
+                {
+                  "id": 3,
+                  "sku": "product-3",
+                  "name": "Leather Backpack",
+                  "price": 129.99,
+                  "currency": "USD",
+                  "image": "https://picsum.photos/400/500?random=3"
+                },
+                {
+                  "id": 4,
+                  "sku": "product-4",
+                  "name": "Wireless Headphones",
+                  "price": 199.99,
+                  "currency": "USD",
+                  "image": "https://picsum.photos/400/500?random=4"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -35,11 +35,8 @@ export interface Product {
   sku: string;
   name: string;
   price: number;
-  currency?: string;
-  image?: {
-    url: string;
-    label: string;
-  };
+  currency: string;
+  image: string;
 }
 
 export interface ProductsResponse {
@@ -77,4 +74,34 @@ export interface SearchFilters {
   };
   pageSize?: number;
   currentPage?: number;
+}
+
+export type ComponentType =
+  | "section"
+  | "hero"
+  | "product-grid"
+  | "product-card"
+  | "product-list"
+  | "pagination";
+
+export interface MagentoComponent {
+  type: ComponentType;
+  props: {
+    className?: string;
+    title?: string;
+    subtitle?: string;
+    image?: string;
+    products?: Product[];
+  };
+  children?: MagentoComponent[];
+}
+
+export interface Layout {
+  identifier: string;
+  title: string;
+  layout_data: MagentoComponent;
+}
+
+export interface LayoutsResponse {
+  layouts: Layout[];
 }
