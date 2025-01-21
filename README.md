@@ -34,11 +34,34 @@ Before you begin, ensure you have:
 
 ## Environment Variables
 
-Create a `.env.local` file in the root directory with:
+Create a `.env.local` file in the root directory with the following variables:
 
-\`\`\`env
-NEXT_PUBLIC_MAGENTO_URL=your-magento-store-url
-\`\`\`
+```env
+# Magento Store URL (required)
+NEXT_PUBLIC_MAGENTO_URL=https://your-magento-store.com
+
+# Magento Admin Credentials (required for seeding)
+MAGENTO_ADMIN_USERNAME=your-admin-username
+MAGENTO_ADMIN_PASSWORD=your-admin-password
+
+# Integration Token (alternative to admin credentials)
+MAGENTO_INTEGRATION_TOKEN=your-integration-token
+
+# Store Configuration
+NEXT_PUBLIC_STORE_NAME="Your Store Name"
+NEXT_PUBLIC_STORE_CODE=default
+```
+
+### Environment Variables Explanation:
+
+- `NEXT_PUBLIC_MAGENTO_URL`: Your Magento store's base URL
+- `MAGENTO_ADMIN_USERNAME`: Magento admin username (needed for seeding data)
+- `MAGENTO_ADMIN_PASSWORD`: Magento admin password (needed for seeding data)
+- `MAGENTO_INTEGRATION_TOKEN`: Integration token from Magento (alternative to admin credentials)
+- `NEXT_PUBLIC_STORE_NAME`: Your store's display name
+- `NEXT_PUBLIC_STORE_CODE`: Magento store code (defaults to 'default')
+
+Note: Make sure to keep your `.env.local` file secure and never commit it to version control.
 
 ## Getting Started
 
@@ -68,21 +91,37 @@ NEXT_PUBLIC_MAGENTO_URL=your-magento-store-url
 
 ## Project Structure
 
-\`\`\`
+```
 src/
-├── app/ # Next.js 15 App Router
-│ ├── api/ # API Routes
-│ ├── layout.tsx # Root Layout
-│ └── page.tsx # Home Page
-├── components/ # React Components
-│ ├── product/ # Product-related Components
-│ └── ui/ # UI Components
-├── lib/ # Utility Functions
-│ ├── hooks/ # Custom React Hooks
-│ └── utils/ # Helper Functions
-├── styles/ # Global Styles
-└── types/ # TypeScript Types
-\`\`\`
+├── app/                        # Next.js 15 App Router
+│   ├── api/                   # API Routes
+│   │   ├── products/         # Product-related API endpoints
+│   │   └── seed/            # Seeding endpoints
+│   ├── layout.tsx            # Root Layout
+│   └── page.tsx              # Home Page
+│
+├── components/                # React Components
+│   ├── product/              # Product-related Components
+│   │   ├── product-card.tsx  # Individual product display
+│   │   ├── product-grid.tsx  # Grid layout for products
+│   │   └── product-list.tsx  # Product listing with pagination
+│   └── ui/                   # Shared UI Components
+│       ├── pagination.tsx    # Pagination component
+│       └── skeletons.tsx     # Loading skeletons
+│
+├── lib/                      # Utility Functions
+│   ├── hooks/               # Custom React Hooks
+│   │   └── useProducts.ts   # Products data fetching hook
+│   └── utils/               # Helper Functions
+│       └── format.ts        # Formatting utilities
+│
+├── styles/                   # Global Styles
+│   └── globals.css          # Global CSS and Tailwind imports
+│
+└── types/                    # TypeScript Types
+    └── magento.ts           # Magento-related type definitions
+
+```
 
 ## Available Scripts
 
