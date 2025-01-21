@@ -1,0 +1,30 @@
+{
+  "name": "nextjs-ecommerce",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "ts-node -P scripts/tsconfig.json scripts/seed.ts",
+    "check-schema": "ts-node -P scripts/tsconfig.json scripts/check-schema.ts"
+  },
+  "dependencies": {
+    "next": "15.1.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "autoprefixer": "^10.4.17",
+    "dotenv": "^16.4.7",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "ts-node": "^10.9.2",
+    "typescript": "5.3.3"
+  }
+}
