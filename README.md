@@ -1,6 +1,6 @@
 # Next.js E-commerce with Magento Backend
 
-A modern e-commerce application built with Next.js 13+ (App Router) and Magento as the backend. This project uses REST API for data fetching and features a clean, responsive design with Tailwind CSS.
+A modern e-commerce application built with Next.js 15+ (App Router) and Magento as the backend. This project uses REST API for data fetching and features a clean, responsive design with Tailwind CSS.
 
 ## Features
 
@@ -15,7 +15,7 @@ A modern e-commerce application built with Next.js 13+ (App Router) and Magento 
 
 ## Tech Stack
 
-- **Frontend Framework**: Next.js 13+ (App Router)
+- **Frontend Framework**: Next.js 15.1.5 (App Router)
 - **Styling**: Tailwind CSS
 - **Backend**: Magento 2
 - **State Management**: React Hooks
@@ -53,18 +53,24 @@ NEXT_PUBLIC_MAGENTO_URL=your-magento-store-url
    npm install
    \`\`\`
 
-3. Run the development server:
+3. Seed the database with initial products:
+   \`\`\`bash
+   npm run seed
+   \`\`\`
+   This step will populate your Magento store with sample products. Make sure your Magento instance is running and your environment variables are set correctly.
+
+4. Run the development server:
    \`\`\`bash
    npm run dev
    \`\`\`
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
 \`\`\`
 src/
-├── app/ # Next.js 13 App Router
+├── app/ # Next.js 15 App Router
 │ ├── api/ # API Routes
 │ ├── layout.tsx # Root Layout
 │ └── page.tsx # Home Page
