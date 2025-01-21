@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface HeroProps {
   title: string;
@@ -7,18 +10,24 @@ interface HeroProps {
   className?: string;
 }
 
-export function Hero({ title, subtitle, image, className = "" }: HeroProps) {
+export function Hero({ title, subtitle, image, className }: HeroProps) {
   return (
-    <div
-      className={`relative h-[400px] overflow-hidden rounded-xl ${className}`}
-    >
-      <Image src={image} alt={title} fill className="object-cover" priority />
+    <div className={cn("relative overflow-hidden", className)}>
+      <Image
+        src={image}
+        alt={title}
+        fill
+        className="object-cover object-center"
+        priority
+      />
       <div className="absolute inset-0 bg-black/40" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+        <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
           {title}
         </h1>
-        <p className="text-lg text-gray-200 sm:text-xl">{subtitle}</p>
+        <p className="mt-6 max-w-xl text-lg leading-8 text-gray-300">
+          {subtitle}
+        </p>
       </div>
     </div>
   );

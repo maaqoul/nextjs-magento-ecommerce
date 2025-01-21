@@ -1,6 +1,15 @@
 "use client";
 
-import { componentMap, MagentoComponent } from "@/lib/magento/config";
+import { MagentoComponent } from "@/types/magento";
+import { Hero } from "@/components/ui/hero";
+import { ProductGrid } from "@/components/ui/product-grid";
+import { Section } from "@/components/ui/section";
+
+const componentMap = {
+  section: Section,
+  hero: Hero,
+  "product-grid": ProductGrid,
+} as const;
 
 interface ComponentRendererProps {
   component: MagentoComponent;
@@ -14,11 +23,5 @@ export function ComponentRenderer({ component }: ComponentRendererProps) {
     return null;
   }
 
-  return (
-    <Component {...component.props}>
-      {component.children?.map((child, index) => (
-        <ComponentRenderer key={index} component={child} />
-      ))}
-    </Component>
-  );
+  return <Component {...component.props} children={component.children} />;
 }

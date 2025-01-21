@@ -12,9 +12,11 @@
     "check-schema": "ts-node -P scripts/tsconfig.json scripts/check-schema.ts"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "next": "15.1.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "@types/node": "20.11.5",

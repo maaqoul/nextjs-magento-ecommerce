@@ -6,58 +6,117 @@
       "layout_data": {
         "type": "section",
         "props": {
-          "className": "container mx-auto px-4 py-8 space-y-8"
+          "className": "min-h-screen bg-gray-50"
         },
         "children": [
           {
             "type": "hero",
             "props": {
-              "title": "Welcome to Our Store",
-              "subtitle": "Discover our curated collection of premium products",
-              "image": "https://picsum.photos/1920/1080",
-              "className": "rounded-lg overflow-hidden"
+              "title": "Summer Collection 2024",
+              "subtitle": "Discover the latest trends in fashion",
+              "image": "https://picsum.photos/1920/1080?random=1",
+              "className": "h-[70vh] relative"
             }
           },
           {
-            "type": "product-grid",
+            "type": "section",
             "props": {
-              "title": "Featured Products",
-              "subtitle": "Hand-picked selections just for you",
-              "products": [
-                {
-                  "id": 1,
-                  "sku": "product-1",
-                  "name": "Premium T-Shirt",
-                  "price": 29.99,
-                  "currency": "USD",
-                  "image": "https://picsum.photos/400/500?random=1"
-                },
-                {
-                  "id": 2,
-                  "sku": "product-2",
-                  "name": "Designer Jeans",
-                  "price": 89.99,
-                  "currency": "USD",
-                  "image": "https://picsum.photos/400/500?random=2"
-                },
-                {
-                  "id": 3,
-                  "sku": "product-3",
-                  "name": "Leather Backpack",
-                  "price": 129.99,
-                  "currency": "USD",
-                  "image": "https://picsum.photos/400/500?random=3"
-                },
-                {
-                  "id": 4,
-                  "sku": "product-4",
-                  "name": "Wireless Headphones",
-                  "price": 199.99,
-                  "currency": "USD",
-                  "image": "https://picsum.photos/400/500?random=4"
+              "className": "container mx-auto px-4 py-16 space-y-16"
+            },
+            "children": [
+              {
+                "type": "product-grid",
+                "props": {
+                  "title": "New Arrivals",
+                  "subtitle": "Fresh styles just landed",
+                  "products": [
+                    {
+                      "id": 1,
+                      "sku": "summer-dress-01",
+                      "name": "Floral Summer Dress",
+                      "price": 79.99,
+                      "currency": "USD",
+                      "image": "https://picsum.photos/400/500?random=2"
+                    },
+                    {
+                      "id": 2,
+                      "sku": "summer-sandals-01",
+                      "name": "Leather Sandals",
+                      "price": 59.99,
+                      "currency": "USD",
+                      "image": "https://picsum.photos/400/500?random=3"
+                    }
+                  ]
                 }
-              ]
-            }
+              },
+              {
+                "type": "section",
+                "props": {
+                  "className": "grid md:grid-cols-2 gap-8"
+                },
+                "children": [
+                  {
+                    "type": "hero",
+                    "props": {
+                      "title": "Men's Collection",
+                      "subtitle": "Elevate your style",
+                      "image": "https://picsum.photos/800/600?random=4",
+                      "className": "h-[400px]"
+                    }
+                  },
+                  {
+                    "type": "hero",
+                    "props": {
+                      "title": "Women's Collection",
+                      "subtitle": "Designed for confidence",
+                      "image": "https://picsum.photos/800/600?random=5",
+                      "className": "h-[400px]"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "props": {
+                  "className": "bg-white rounded-xl shadow-sm p-8"
+                },
+                "children": [
+                  {
+                    "type": "product-grid",
+                    "props": {
+                      "title": "Best Sellers",
+                      "subtitle": "Our most popular items",
+                      "products": [
+                        {
+                          "id": 3,
+                          "sku": "leather-bag-01",
+                          "name": "Premium Leather Bag",
+                          "price": 199.99,
+                          "currency": "USD",
+                          "image": "https://picsum.photos/400/500?random=6"
+                        },
+                        {
+                          "id": 4,
+                          "sku": "sunglasses-01",
+                          "name": "Designer Sunglasses",
+                          "price": 129.99,
+                          "currency": "USD",
+                          "image": "https://picsum.photos/400/500?random=7"
+                        },
+                        {
+                          "id": 5,
+                          "sku": "watch-01",
+                          "name": "Classic Timepiece",
+                          "price": 299.99,
+                          "currency": "USD",
+                          "image": "https://picsum.photos/400/500?random=8"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

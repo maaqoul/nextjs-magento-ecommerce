@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { ComponentRenderer } from "@/components/magento/component-renderer";
-import { useLayout } from "@/lib/hooks/useLayout";
 import mockData from "@/data/mock-layouts.json";
 
 export const metadata: Metadata = {
@@ -18,7 +17,7 @@ export default function HomePage() {
   }
 
   return (
-    <main>
+    <main className="min-h-screen">
       <ComponentRenderer component={homeLayout.layout_data} />
     </main>
   );
