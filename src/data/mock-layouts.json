@@ -36,7 +36,10 @@
                       "name": "Floral Summer Dress",
                       "price": 79.99,
                       "currency": "USD",
-                      "image": "https://picsum.photos/400/500?random=2"
+                      "image": {
+                        "url": "https://picsum.photos/400/500?random=2",
+                        "label": "Floral Summer Dress"
+                      }
                     },
                     {
                       "id": 2,

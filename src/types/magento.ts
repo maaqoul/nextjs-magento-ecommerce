@@ -36,7 +36,10 @@ export interface Product {
   name: string;
   price: number;
   currency: string;
-  image: string;
+  image: {
+    url: string;
+    label?: string;
+  };
 }
 
 export interface ProductsResponse {
