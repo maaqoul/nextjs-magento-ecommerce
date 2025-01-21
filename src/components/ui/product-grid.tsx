@@ -34,8 +34,8 @@ export function ProductGrid({
           <div key={product.id} className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200">
               <Image
-                src={product.image}
-                alt={product.name}
+                src={product.image.url}
+                alt={product.image.label || product.name}
                 width={500}
                 height={500}
                 className="object-cover object-center group-hover:opacity-75 transition"

@@ -14,7 +14,10 @@
             "props": {
               "title": "Summer Collection 2024",
               "subtitle": "Discover the latest trends in fashion",
-              "image": "https://picsum.photos/1920/1080?random=1",
+              "image": {
+                "url": "https://picsum.photos/1920/1080?random=1",
+                "label": "Summer Collection 2024"
+              },
               "className": "h-[70vh] relative"
             }
           },
@@ -47,7 +50,10 @@
                       "name": "Leather Sandals",
                       "price": 59.99,
                       "currency": "USD",
-                      "image": "https://picsum.photos/400/500?random=3"
+                      "image": {
+                        "url": "https://picsum.photos/400/500?random=3",
+                        "label": "Leather Sandals"
+                      }
                     }
                   ]
                 }
@@ -63,7 +69,10 @@
                     "props": {
                       "title": "Men's Collection",
                       "subtitle": "Elevate your style",
-                      "image": "https://picsum.photos/800/600?random=4",
+                      "image": {
+                        "url": "https://picsum.photos/800/600?random=4",
+                        "label": "Men's Collection"
+                      },
                       "className": "h-[400px]"
                     }
                   },
@@ -72,7 +81,10 @@
                     "props": {
                       "title": "Women's Collection",
                       "subtitle": "Designed for confidence",
-                      "image": "https://picsum.photos/800/600?random=5",
+                      "image": {
+                        "url": "https://picsum.photos/800/600?random=5",
+                        "label": "Women's Collection"
+                      },
                       "className": "h-[400px]"
                     }
                   }
@@ -96,7 +108,10 @@
                           "name": "Premium Leather Bag",
                           "price": 199.99,
                           "currency": "USD",
-                          "image": "https://picsum.photos/400/500?random=6"
+                          "image": {
+                            "url": "https://picsum.photos/400/500?random=6",
+                            "label": "Premium Leather Bag"
+                          }
                         },
                         {
                           "id": 4,
@@ -104,7 +119,10 @@
                           "name": "Designer Sunglasses",
                           "price": 129.99,
                           "currency": "USD",
-                          "image": "https://picsum.photos/400/500?random=7"
+                          "image": {
+                            "url": "https://picsum.photos/400/500?random=7",
+                            "label": "Designer Sunglasses"
+                          }
                         },
                         {
                           "id": 5,
@@ -112,7 +130,10 @@
                           "name": "Classic Timepiece",
                           "price": 299.99,
                           "currency": "USD",
-                          "image": "https://picsum.photos/400/500?random=8"
+                          "image": {
+                            "url": "https://picsum.photos/400/500?random=8",
+                            "label": "Classic Timepiece"
+                          }
                         }
                       ]
                     }

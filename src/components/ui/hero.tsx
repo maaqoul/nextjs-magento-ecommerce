@@ -6,7 +6,10 @@ import { cn } from "@/lib/utils";
 interface HeroProps {
   title: string;
   subtitle: string;
-  image: string;
+  image: {
+    url: string;
+    label?: string;
+  };
   className?: string;
 }
 
@@ -14,8 +17,8 @@ export function Hero({ title, subtitle, image, className }: HeroProps) {
   return (
     <div className={cn("relative overflow-hidden", className)}>
       <Image
-        src={image}
-        alt={title}
+        src={image.url}
+        alt={image.label || title}
         fill
         className="object-cover object-center"
         priority

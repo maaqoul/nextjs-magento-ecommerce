@@ -93,7 +93,10 @@ export interface MagentoComponent {
     className?: string;
     title?: string;
     subtitle?: string;
-    image?: string;
+    image?: {
+      url: string;
+      label?: string;
+    };
     products?: Product[];
   };
   children?: MagentoComponent[];
